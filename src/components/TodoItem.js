@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import TodoForm from './TodoForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import EditTodoForm from './EditTodoForm';
 
-class Todo extends Component {
+class TodoItem extends Component {
 
     state = {
         formStyle: {
@@ -11,9 +12,6 @@ class Todo extends Component {
             display: 'block',
             textDecoration: 'none'
         },
-        // listStyle: {
-        //     textDecoration: 'none'
-        // }
     };
 
     toggleBodyForm = () => {
@@ -44,7 +42,7 @@ class Todo extends Component {
         const { todo, updateTodo } = this.props;
         return (
             <li data-todos-index={todo._id}>
-                <div>
+                <div className="todo">
                     <span>
                         <input type="checkbox" checked={todo.completed} onChange={this.toggleStatusForm} />
                     </span>
@@ -52,17 +50,17 @@ class Todo extends Component {
                         {todo.body}
                     </span>
                     <span
-                        className='edit'
-                        onClick={this.toggleBodyForm}>
-                        Edit
-                    </span>
-                    <span
                         className='remove'
                         onClick={this.deleteClickedTodo}>
-                        Delete
+                        <FontAwesomeIcon icon="trash-alt" />
+                    </span>
+                    <span
+                        className='edit'
+                        onClick={this.toggleBodyForm}>
+                        <FontAwesomeIcon icon="edit" />
                     </span>
                 </div>
-                <TodoForm
+                <EditTodoForm
                     todo={todo}
                     style={this.state.formStyle}
                     autoFocus={true}
@@ -74,4 +72,4 @@ class Todo extends Component {
     };
 };
 
-export default Todo;
+export default TodoItem;

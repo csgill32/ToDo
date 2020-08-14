@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class TodoForm extends Component {
+class EditTodoForm extends Component {
     state = {
         todo: this.props.todo.body,
     };
@@ -30,11 +30,11 @@ class TodoForm extends Component {
                         type="text"
                         value={this.state.todo}
                     />
-                    <button className='btn' type="submit">Save</button>
+                    {/* <button className='btn' type="submit">Save</button> */}
                 </form>
             </div>
         );
     };
 };
 
-export default TodoForm;
+export default EditTodoForm;

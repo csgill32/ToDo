@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class CreateTodoForm extends Component {
     state = {
@@ -22,7 +23,7 @@ class CreateTodoForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="addItem">
                 <form onSubmit={this.onFormSubmit} id="taskForm">
                     <input
                         onChange={this.onInputChange}
@@ -30,7 +31,7 @@ class CreateTodoForm extends Component {
                         placeholder="What do you need to do?"
                         value={this.state.todo}
                     />
-                    <button type="submit" id="addTask" className="btn">Add Todo</button>
+                    <button type="submit" id="addTask" className="btn"><FontAwesomeIcon icon="plus-circle" size="lg" /></button>
                 </form>
             </div>
         );

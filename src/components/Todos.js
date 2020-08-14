@@ -1,10 +1,10 @@
 import React from 'react';
-import Todo from './Todo';
+import TodoItem from './TodoItem';
 
 const Todos = (props) => {
     let todos = props.todos.map((todo) => {
         return (
-            <Todo
+            <TodoItem
                 key={todo.id}
                 todo={todo}
                 deleteTodo={props.deleteTodo}
