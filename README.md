@@ -6,13 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A single page Todo list app that allows the user to add, edit and delete list items. A user can also mark an item as complete.
 
 ## Technology Used
-ReactJS
-Axios API
-Data stored in Heroku app
+* ReactJS
+* Axios API
+* Data stored in Heroku app
 
 ## Next Steps
-Error handling
-Counter/Stats for completed and remaining todo items
+* Error handling
+* Counter/Stats for completed and remaining todo items
 
 ## Setup
 In the project directory, you can run:
