@@ -9,7 +9,11 @@ class Todo extends Component {
         },
         itemStyle: {
             display: 'block',
+            textDecoration: 'none'
         },
+        // listStyle: {
+        //     textDecoration: 'none'
+        // }
     };
 
     toggleBodyForm = () => {
@@ -25,8 +29,10 @@ class Todo extends Component {
     toggleStatusForm = () => {
         if (this.props.todo.completed) {
             this.props.updateTodoStatus(this.props.todo, false);
+            this.setState({ itemStyle: { textDecoration: 'none' } })
         } else {
             this.props.updateTodoStatus(this.props.todo, true);
+            this.setState({ itemStyle: { textDecoration: 'line-through' } })
         }
     };
 
